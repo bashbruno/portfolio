@@ -1,15 +1,124 @@
-@import "tailwindcss";
+@import "./utilities.css";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/**
+* Variables
+*/
+
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Widths */
+  --max-width-default: 1440px;
+
+  /* Font sizes */
+  --font-size-1: 12px;
+  --font-size-1-5: 14px;
+  --font-size-2: 16px;
+  --font-size-3: 18px;
+  --font-size-4: 20px;
+  --font-size-4-5: 22px;
+  --font-size-5: 24px;
+  --font-size-5-5: 28px;
+  --font-size-6: 32px;
+  --font-size-7: 40px;
+  --font-size-8: 48px;
+  --font-size-9: 64px;
+
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Font families */
+  --font-family-poppins: "Poppins", sans-serif;
+
+  /* Border Radius */
+  --border-radius-1: 2px;
+  --border-radius-2: 4px;
+  --border-radius-3: 8px;
+  --border-radius-4: 12px;
+
+  /* Spacings */
+  --space-0: 0;
+  --space-2px: 2px;
+  --space-1: 4px;
+  --space-1-25: 5px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-3-5: 14px;
+  --space-3-75: 15px;
+  --space-4: 16px;
+  --space-4-25: 18px;
+  --space-4-5: 20px;
+  --space-5: 24px;
+  --space-5-5: 28px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 48px;
+  --space-8-5: 52px;
+  --space-9: 56px;
+  --space-10: 64px;
+  --space-11: 72px;
+  --space-12: 80px;
+  --space-13: 88px;
+  --space-14: 96px;
+  --space-15: 104px;
+  --space-16: 112px;
+  --space-17: 120px;
+  --space-18: 128px;
+  --space-19: 136px;
+  --space-20: 144px;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+/**
+* Reset
+* https://www.joshwcomeau.com/css/custom-css-reset/
+*/
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+body {
+  font-family: var(--font-family-poppins);
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
 }

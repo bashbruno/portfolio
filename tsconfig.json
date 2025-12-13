@@ -17,6 +17,14 @@
     "paths": {
       "~/*": ["./app/*"]
     },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCaseOnly"
+        }
+      }
+    ],
     "esModuleInterop": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
