@@ -3,5 +3,5 @@ export function HomePage() {
     <div className="container">
       <p>hello</p>
     </div>
-  );
+  )
 }
