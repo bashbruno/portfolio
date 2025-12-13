@@ -33,7 +33,7 @@
   --font-weight-bold: 700;
 
   /* Font families */
-  --font-family-poppins: "Poppins", sans-serif;
+  --font-family-onest: "Onest", sans-serif;
 
   /* Border Radius */
   --border-radius-1: 2px;
@@ -81,7 +81,7 @@
  */
 
 body {
-  font-family: var(--font-family-poppins);
+  font-family: var(--font-family-onest);
   min-height: 100vh;
 }
 
