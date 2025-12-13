@@ -1,5 +1,4 @@
 import { HomePage } from '~/screens/home'
-import type { Route } from './+types/home'
 
 export function meta() {
   return [
