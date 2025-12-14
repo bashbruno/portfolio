@@ -1,0 +1,10 @@
+.text {
+  font-size: clamp(var(--font-size-5), calc(5vw + 1rem), var(--font-size-12));
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+
+  span {
+    display: inline-block;
+    cursor: pointer;
+  }
+}

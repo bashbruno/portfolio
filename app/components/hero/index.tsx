@@ -1,5 +1,7 @@
 import { Briefcase, ChevronDown, CircleUserRound, Mail } from 'lucide-react'
 import { content } from '~/config/content'
+import { withLineBreak } from '~/utils'
+import { AnimatedText } from '../animated-text'
 import styles from './hero.module.css'
 
 export function Hero() {
@@ -20,8 +22,10 @@ export function Hero() {
           </nav>
         </header>
         <div className={styles.content}>
-          <h1 id="hero-heading">{content.hero.title}</h1>
-          <p>{content.hero.description}</p>
+          <AnimatedText id="hero-heading" as="h1">
+            {content.hero.title}
+          </AnimatedText>
+          <p>{withLineBreak(content.hero.description)}</p>
         </div>
         <footer className={styles.footer} aria-hidden="true">
           <button

@@ -1,8 +1,8 @@
 const content = {
   hero: {
-    title: "Hi, I'm Bruno",
+    title: "Hey, I'm Bruno",
     description:
-      'A self-taught Software Engineer, currently working on full-stack web development.',
+      'Self-taught Software Engineer, currently working in full-stack web development.',
   },
 } as const
 
