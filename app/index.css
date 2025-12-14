@@ -87,6 +87,11 @@
   --space-19: 136px;
   --space-20: 144px;
 
+  /* Z-indices */
+
+  --z-index-0: 0;
+  --z-index-1: 1;
+
   /* Box shadows */
   --shadow-soft: 0 0 40px 5px #0000001a;
 

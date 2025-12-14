@@ -12,13 +12,28 @@
   padding: var(--space-5);
   display: grid;
   grid-template-rows: auto 1fr auto;
+  position: relative;
   background-image: var(--noise-light);
   background-repeat: repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: var(--space-0);
+    background-image: url("/app/assets/grid.jpg");
+    background-repeat: repeat;
+    opacity: 0.25;
+    border-radius: var(--border-radius-11);
+    pointer-events: none;
+    z-index: var(--z-index-0);
+  }
 }
 
 .header {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: var(--z-index-1);
 
   nav {
     display: flex;
@@ -36,10 +51,9 @@
 .footer {
   display: flex;
   justify-content: center;
-
-  button {
-    color: var(--black);
-  }
+  padding-bottom: var(--space-5);
+  position: relative;
+  z-index: var(--z-index-1);
 }
 
 .content {
@@ -47,6 +61,8 @@
   display: grid;
   place-content: center;
   gap: var(--space-4);
+  position: relative;
+  z-index: var(--z-index-1);
 
   p {
     color: var(--light-gray);

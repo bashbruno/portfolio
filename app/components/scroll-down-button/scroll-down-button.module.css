@@ -1,0 +1,9 @@
+.btn {
+  background-color: var(--accent-blue);
+  color: var(--white);
+  border-radius: var(--border-radius-11);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}

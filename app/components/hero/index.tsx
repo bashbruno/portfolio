@@ -1,7 +1,8 @@
-import { Briefcase, ChevronDown, CircleUserRound, Mail } from 'lucide-react'
+import { Briefcase, CircleUserRound, Mail } from 'lucide-react'
+import { AnimatedText } from '~/components/animated-text'
+import { ScrollDownButton } from '~/components/scroll-down-button'
 import { content } from '~/config/content'
 import { withLineBreak } from '~/utils'
-import { AnimatedText } from '../animated-text'
 import styles from './hero.module.css'
 
 export function Hero() {
@@ -28,15 +29,7 @@ export function Hero() {
           <p>{withLineBreak(content.hero.description)}</p>
         </div>
         <footer className={styles.footer} aria-hidden="true">
-          <button
-            type="button"
-            aria-label="Scroll to content"
-            onClick={() =>
-              window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
-            }
-          >
-            <ChevronDown aria-hidden="true" />
-          </button>
+          <ScrollDownButton />
         </footer>
       </div>
     </section>
