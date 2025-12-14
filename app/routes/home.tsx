@@ -2,11 +2,15 @@ import { HomePage } from '~/screens/home'
 
 export function meta() {
   return [
-    { title: 'New React Router App' },
-    { name: 'description', content: 'Welcome to React Router!' },
+    { title: 'Bruno Santos - Software Engineer' },
+    { name: 'description', content: 'Welcome to my portfolio!' },
   ]
 }
 
 export default function Home() {
-  return <HomePage />
+  return (
+    <main>
+      <HomePage />
+    </main>
+  )
 }
