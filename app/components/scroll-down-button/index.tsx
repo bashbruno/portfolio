@@ -16,7 +16,7 @@ export function ScrollDownButton() {
           repeat: Infinity,
           repeatType: 'reverse',
           type: 'spring',
-          duration: 1.2,
+          duration: 1.7,
           bounce: 0.7,
         },
       )

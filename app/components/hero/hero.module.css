@@ -34,18 +34,6 @@
   justify-content: center;
   position: relative;
   z-index: var(--z-index-1);
-
-  nav {
-    display: flex;
-    gap: var(--space-3);
-    background-color: var(--black);
-    padding: var(--space-3);
-    border-radius: var(--border-radius-11);
-
-    button {
-      color: var(--white);
-    }
-  }
 }
 
 .footer {
