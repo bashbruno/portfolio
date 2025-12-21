@@ -1,11 +1,6 @@
 import { Briefcase, CircleUserRound, Mail } from 'lucide-react'
-import {
-  AnimatePresence,
-  type HTMLMotionProps,
-  LayoutGroup,
-  motion,
-} from 'motion/react'
-import { type ComponentProps, type ReactNode, useState } from 'react'
+import { type HTMLMotionProps, LayoutGroup, motion } from 'motion/react'
+import { type ReactNode, useState } from 'react'
 import styles from './sticky-navigation.module.css'
 
 export function StickyNavigation() {
@@ -14,11 +9,11 @@ export function StickyNavigation() {
       className={styles.container}
       transition={{
         type: 'spring',
-        duration: 0.6,
-        bounce: 0.6,
+        duration: 0.7,
+        bounce: 0.3,
       }}
       whileHover={{
-        scale: 1.2,
+        scale: 1.15,
       }}
     >
       <LayoutGroup>
@@ -63,22 +58,6 @@ function NavigationItem({ label, children, ...props }: NavigationItemProps) {
       onHoverStart={() => setHover(true)}
       onHoverEnd={() => setHover(false)}
     >
-      <AnimatePresence>
-        {hover && (
-          <motion.div
-            layoutId="hover-bg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className={styles.hover}
-            transition={{
-              type: 'spring',
-              bounce: 0.4,
-              duration: 0.7,
-            }}
-          />
-        )}
-      </AnimatePresence>
       {children}
       <motion.span
         className={styles.label}

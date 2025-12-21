@@ -17,17 +17,19 @@
     display: flex;
     align-items: center;
     gap: var(--space-2);
+    transition: all 100ms ease-in-out;
   }
 
   a:hover {
     color: var(--black);
+    background-color: var(--white);
   }
 }
 
 .label {
-  white-space: nowrap;
   font-size: var(--font-size-1);
   font-weight: var(--font-weight-bold);
+  white-space: nowrap;
   overflow: hidden;
   display: inline-block;
 }
