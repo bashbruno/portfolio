@@ -1,6 +1,4 @@
-.header {
-  display: flex;
-  justify-content: center;
+.animation-container {
   position: fixed;
   top: var(--space-8);
   left: var(--space-5);
@@ -12,6 +10,11 @@
     left: var(--space-4-5);
     right: var(--space-4-5);
   }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
 }
 
 .container {

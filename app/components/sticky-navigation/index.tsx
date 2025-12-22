@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { APP_NAVIGATION } from '~/utils/constants'
+import { HideOnScroll } from '../animations/hide-on-scroll'
 import { NavigationItem } from './common/navigation-item'
 import {
   NavigationMenuProvider,
@@ -17,32 +18,39 @@ export function StickyNavigation() {
 }
 
 function NavigationContent() {
-  const { isOpen } = useNavigationMenu()
+  const { isOpen, setIsOpen } = useNavigationMenu()
 
   return (
-    <header className={styles.header}>
-      <motion.nav
-        className={styles.container}
-        initial={{ height: 50 }}
-        animate={{ height: isOpen ? 'auto' : 50 }}
-        transition={{
-          type: 'spring',
-          duration: 0.7,
-          bounce: 0.3,
-        }}
-        whileHover={{
-          scale: 1.15,
-        }}
-      >
-        <div className={styles.wrapper}>
-          <MobileMenuToggle />
-          {APP_NAVIGATION.map((i) => (
-            <NavigationItem key={i.label} aria-label={i.label} {...i}>
-              <i.Icon aria-hidden="true" />
-            </NavigationItem>
-          ))}
-        </div>
-      </motion.nav>
-    </header>
+    <HideOnScroll
+      className={styles.animationContainer}
+      onHide={() => {
+        if (isOpen) setIsOpen(false)
+      }}
+    >
+      <header className={styles.header}>
+        <motion.nav
+          className={styles.container}
+          initial={{ height: 50 }}
+          animate={{ height: isOpen ? 'auto' : 50 }}
+          transition={{
+            type: 'spring',
+            duration: 0.7,
+            bounce: 0.3,
+          }}
+          whileHover={{
+            scale: 1.15,
+          }}
+        >
+          <div className={styles.wrapper}>
+            <MobileMenuToggle />
+            {APP_NAVIGATION.map((i) => (
+              <NavigationItem key={i.label} aria-label={i.label} {...i}>
+                <i.Icon aria-hidden="true" />
+              </NavigationItem>
+            ))}
+          </div>
+        </motion.nav>
+      </header>
+    </HideOnScroll>
   )
 }

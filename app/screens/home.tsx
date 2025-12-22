@@ -1,5 +1,5 @@
+import { ScaleOnScroll } from '~/components/animations/scale-on-scroll'
 import { Hero } from '~/components/hero'
-import { ScaleOnScroll } from '~/components/scale-on-scroll'
 
 export function HomePage() {
   return (
