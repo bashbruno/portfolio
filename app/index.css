@@ -10,6 +10,7 @@
   --black: #000000;
   --accent-blue: #2563eb;
   --light-gray: #00000080;
+  --dark-gray: #1a1c1d;
 
   /* Widths */
   --max-width-default: 1440px;
@@ -88,9 +89,9 @@
   --space-20: 144px;
 
   /* Z-indices */
-
   --z-index-0: 0;
   --z-index-1: 1;
+  --z-index-2: 2;
 
   /* Box shadows */
   --shadow-soft: 0 0 40px 5px #0000001a;
@@ -104,12 +105,6 @@
  * https://www.joshwcomeau.com/css/custom-css-reset/
  */
 
-body {
-  font-family: var(--font-family-onest);
-  color: var(--black);
-  background-color: var(--white);
-}
-
 *,
 *::before,
 *::after {
@@ -118,6 +113,17 @@ body {
 
 * {
   margin: 0;
+}
+
+body {
+  font-family: var(--font-family-onest);
+  color: var(--black);
+  background-color: var(--white);
+  padding: var(--space-5);
+
+  @media (max-width: 768px) {
+    padding: var(--space-2-5);
+  }
 }
 
 img,

@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'react-router'
+import { StickyNavigation } from '~/components/sticky-navigation'
 import type { Route } from './+types/root'
 import './index.css'
 
@@ -32,6 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <StickyNavigation />
         {children}
         <ScrollRestoration />
         <Scripts />
